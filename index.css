@@ -266,7 +266,30 @@ p {
   color: #fff;
   font-size: 16px;
 }
-
+.hover-text-question{
+  display: none;
+}
+.tab1:hover .hover-text-question{
+  display: block;
+}
+.hover-text-company{
+  display: none;
+}
+.tab2:hover .hover-text-company{
+  display: block;
+}
+.hover-text-project{
+  display: none;
+}
+.tab3:hover .hover-text-project{
+  display: block;
+}
+.hover-text-skill{
+  display: none;
+}
+.tab4:hover .hover-text-skill{
+  display: block;
+}
 .tab1:hover .content {
   width: 50%;
 }
