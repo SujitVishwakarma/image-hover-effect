@@ -1,4 +1,5 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ * {
   box-sizing: border-box;
 }
 
@@ -87,7 +88,6 @@ body {
   background: #fff;
   cursor: pointer;
   transition: width 0.5s ease;
-
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -96,19 +96,124 @@ body {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.tab1:hover h1{
+  font-weight: 600;
+}
+.tab2:hover h1{
+  font-weight: 600;
+}
+.tab3:hover h1{
+  font-weight: 600;
+}
+.tab4:hover h1{
+  font-weight: 600;
+}
 
-.tab1:hover {
-  width: 90%;
+/* Initial width for tab1 */
+.tab1 {
+  width: 90%; 
+  background-color: #9bc9ff;
+  border-radius: 2px;
 }
-.tab2:hover {
-  width: 90%;
+
+.tab1 .icon1 {
+  background-color: #fff; 
 }
-.tab3:hover {
-  width: 90%;
+.tab1 .content{
+  width: 54%;
 }
+.tab1 .phone-mockup {
+  width: 215px; 
+  opacity: 1;   
+}
+
+.tab1 .arrow-icon {
+  display: none; 
+}
+
+.tab1 .start-button {
+  display: block; 
+}
+
+.tab1 .hover-text-question {
+  display: block; 
+}
+
+.tab1 .question-project {
+  display: none; 
+}
+
+.ctr-accordion:hover .tab1:not(:hover) .arrow-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #000;
+  font-size: 16px;
+  transition: opacity 0.3s ease, display 0.3s ease;
+  display: inline-block;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+.ctr-accordion:hover .tab1:not(:hover) .start-button{
+  display: none;
+}
+.ctr-accordion:hover .tab1:not(:hover) .question-project {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  font-size: 16px;
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+.ctr-accordion:hover .tab1:not(:hover) p{
+  margin-right: 20px;
+}
+.tab1:hover,
+.tab2:hover,
+.tab3:hover,
 .tab4:hover {
   width: 90%;
 }
+
+
+.ctr-accordion:hover .tab1:not(:hover) {
+  width: 30%;
+  background-color: #fff;
+}
+.ctr-accordion:hover .tab1:not(:hover) .icon1{
+  background-color: #9bc9ff;
+}
+.ctr-accordion:hover .tab1:not(:hover) .content{
+  width: 100%;
+}
+.ctr-accordion:hover .tab1:not(:hover) .phone-mockup {
+  width: 0;
+  height: auto;
+  transition: all 0.5s ease;
+  position: absolute;
+  bottom: 0;
+  right: 80px;
+  z-index: 3;
+  opacity: 0;
+  margin-bottom: -15px;
+}
+.ctr-accordion:hover .tab1:not(:hover) .hover-text-question{
+  display: flex;
+  position: absolute;
+  bottom: -6px;
+  font-size: 15px;
+}
+/*width of other tabs to 30% when one is hovered */
+.ctr-accordion:hover .tab2:not(:hover),
+.ctr-accordion:hover .tab3:not(:hover),
+.ctr-accordion:hover .tab4:not(:hover) {
+  width: 30%;
+}
+
+/* Icon and content styles */
 .icon-image {
   position: absolute;
   top: 10px;
@@ -122,12 +227,12 @@ body {
 }
 
 .tab:hover .icon-image {
-  opacity: 0.6; /* Dim background image on hover */
+  opacity: 0.6; 
 }
 
 .container {
   display: flex;
-  flex-direction: column; /* Stack content */
+  flex-direction: column; 
   align-items: flex-start;
   justify-content: space-between;
   z-index: 2;
@@ -140,8 +245,12 @@ body {
   margin-bottom: auto;
   position: relative;
   flex-grow: 1;
+  font-family: "Inter", sans-serif;
 }
-
+.content h1{
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
 .icon1,
 .icon2,
 .icon3,
@@ -154,6 +263,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .icon1 img,
 .icon2 img,
 .icon3 img,
@@ -161,42 +271,54 @@ body {
   width: 30px;
   height: 30px;
 }
+
 .icon1 {
   background-color: #9bc9ff;
 }
+
 .icon2 {
   background-color: #ffb1cc;
 }
+
 .icon3 {
   background-color: #c8bbff;
 }
+
 .icon4 {
   background-color: #ffdd80;
 }
+
 .tab1:hover .icon1 {
   background-color: #fff;
 }
+
 .tab1:hover {
   background-color: #9bc9ff;
   border-radius: 2px;
 }
+
 .tab2:hover .icon2 {
   background-color: #fff;
 }
+
 .tab2:hover {
   background-color: #ffb1cc;
   border-radius: 2px;
 }
+
 .tab3:hover .icon3 {
   background-color: #fff;
 }
+
 .tab3:hover {
   background-color: #c8bbff;
   border-radius: 2px;
 }
+
 .tab4:hover .icon4 {
   background-color: #fff;
 }
+
 .tab4:hover {
   background-color: #ffdd80;
   border-radius: 2px;
@@ -219,7 +341,7 @@ p {
   position: absolute;
   bottom: 10px;
   left: 0;
-  font-size: 16px;
+  font-size: 15px;
   color: #000;
   transition: opacity 0.3s ease;
 }
@@ -229,7 +351,7 @@ p {
   bottom: 10px;
   right: 10px;
   color: #000;
-  font-size: 20px;
+  font-size: 16px;
   transition: opacity 0.3s ease, display 0.3s ease;
   display: inline-block;
   z-index: 2;
@@ -255,7 +377,7 @@ p {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  display: none; /* Hidden initially */
+  display: none;
   padding: 10px 5px;
   background-color: #163a66;
   border-radius: 10px;
@@ -327,6 +449,8 @@ p {
   display: none;
 }
 
+
+/* image part code  */
 .phone-mockup {
   width: 0;
   height: auto;
@@ -339,22 +463,14 @@ p {
   margin-bottom: -15px;
 }
 
-.tab1:hover .phone-mockup {
-  width: 215px;
-  opacity: 1;
-}
-.tab2:hover .phone-mockup {
-  width: 215px;
-  opacity: 1;
-}
-.tab3:hover .phone-mockup {
-  width: 215px;
-  opacity: 1;
-}
+.tab1:hover .phone-mockup,
+.tab2:hover .phone-mockup,
+.tab3:hover .phone-mockup,
 .tab4:hover .phone-mockup {
   width: 215px;
   opacity: 1;
 }
+
 .phone-mockup img {
   width: 320px;
   height: auto;
