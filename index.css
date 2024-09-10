@@ -16,6 +16,7 @@ body {
     rgba(212, 223, 233, 1) 0%,
     rgba(254, 252, 240, 1) 100%
   );
+  font-family: "Inter", sans-serif;
 }
 
 .top-header {
